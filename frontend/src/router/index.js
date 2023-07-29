@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import MainDefault from '../layout/MainDefault.vue'
-
+import ZeroWaste from '@/views/ZeroWaste'
 Vue.use(VueRouter)
 
 const routes = [
@@ -28,7 +28,18 @@ const routes = [
         component: AboutView
       }
     ]
-  }
+  },
+    {
+    path: '/ZeroWaste',
+    name: 'about',
+    component: MainDefault,
+    children:[
+      {
+        path:'',
+        component: ZeroWaste
+      }
+    ]
+  },
 ]
 
 const router = new VueRouter({
