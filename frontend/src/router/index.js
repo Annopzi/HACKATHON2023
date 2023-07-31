@@ -31,7 +31,7 @@ const routes = [
   },
     {
     path: '/ZeroWaste',
-    name: 'about',
+    name: 'ZeroWaste',
     component: MainDefault,
     children:[
       {
