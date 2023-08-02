@@ -95,7 +95,7 @@
             <v-list-item-icon class="mr-auto">
               <v-icon color="white">mdi-logout</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="ml-2 white--text">Sign out</v-list-item-title>
+            <v-list-item-title class="ml-2 white--text">Sign Out</v-list-item-title>
           </v-list-item>
           
         </v-list-item-group>
