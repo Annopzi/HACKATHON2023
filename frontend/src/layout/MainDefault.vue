@@ -57,18 +57,16 @@
         </v-select>
       </div>
       <div class="mr-10">
-        <v-btn icon small>
-          <v-badge color="green" dot bottom absolute>
-            <v-avatar style="margin-left: 5%">
-              <v-img
-                center
-                :src="require('../assets/profile.png')"
-                style="height: 110px; margin-top: 50%"
-              />
-            </v-avatar>
-          </v-badge>
+        <v-btn icon>
+          <v-avatar style="margin-left: 30%">
+            <v-img
+              center
+              :src="require('../assets/profile.png')"
+              style="height: 110px; margin-top: 50%"
+            />
+          </v-avatar>
 
-          <v-icon color="#7cd40c">mdi-menu-down</v-icon>
+          <v-icon class="" color="#7cd40c">mdi-menu-down</v-icon>
         </v-btn>
       </div>
     </v-app-bar>
@@ -79,19 +77,27 @@
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-home</v-icon>
+          <v-img
+            :src="require('../assets/logo.png')"
+            contain
+            class="my-3 mx-auto"
+            width="150px"
+          />
+          
+          <v-list-item style="background-color: #38D9B2;">
+            <v-list-item-icon class="mr-auto">
+              <v-icon color="white">mdi-account</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Home</v-list-item-title>
+            <v-list-item-title class="ml-2 white--text">Login</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
+          <v-list-item style="background-color: #F55A9A;">
+            <v-list-item-icon class="mr-auto">
+              <v-icon color="white">mdi-logout</v-icon>
             </v-list-item-icon>
-            <v-list-item-title>Account</v-list-item-title>
+            <v-list-item-title class="ml-2 white--text">Sign out</v-list-item-title>
           </v-list-item>
+          
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -104,7 +110,7 @@
 export default {
   data() {
     return {
-      drawer: false,
+      drawer: true,
       select: "EN",
       item: ["EN", "TH"],
     };
