@@ -65,12 +65,10 @@
               style="height: 110px; margin-top: 50%"
             />
           </v-avatar>
-
           <v-icon class="" color="#7cd40c">mdi-menu-down</v-icon>
         </v-btn>
       </div>
     </v-app-bar>
-
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group
@@ -83,21 +81,42 @@
             class="my-3 mx-auto"
             width="150px"
           />
-          
-          <v-list-item style="background-color: #38D9B2;">
+
+          <v-list-item style="background-color: #38d9b2">
             <v-list-item-icon class="mr-auto">
-              <v-icon color="white">mdi-account</v-icon>
+              <v-icon color="white">mdi-home</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="ml-2 white--text">Login</v-list-item-title>
+            <v-list-item-title class="ml-2 white--text">
+              Home
+            </v-list-item-title>
           </v-list-item>
 
-          <v-list-item style="background-color: #F55A9A;">
+          <v-list-item style="background-color: #f55a9a">
             <v-list-item-icon class="mr-auto">
               <v-icon color="white">mdi-logout</v-icon>
             </v-list-item-icon>
-            <v-list-item-title class="ml-2 white--text">Sign Out</v-list-item-title>
+            <v-list-item-title class="ml-2 white--text"
+              >Sign Out</v-list-item-title
+            >
           </v-list-item>
-          
+
+          <v-list-group :value="true">
+            <template v-slot:activator>
+              <v-list-item link style="background-color: #f55a9a">
+                <v-list-item-icon class="mr-auto">
+                  <v-icon>mdi-home</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title class="ml-2">Home</v-list-item-title>
+              </v-list-item>
+            </template>
+
+            <v-list-item link style="background-color: #f4f8fa">
+              <v-list-item-icon class="mr-auto">
+                <v-icon color="#70B1A6">mdi-home</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title class="ml-2">Hi</v-list-item-title>
+            </v-list-item>
+          </v-list-group>
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
@@ -113,9 +132,8 @@ export default {
       drawer: true,
       select: "EN",
       item: ["EN", "TH"],
+      home: [],
     };
   },
 };
 </script>
-
-<style scoped></style>
